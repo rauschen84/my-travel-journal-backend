@@ -1,9 +1,9 @@
 services:
   - type: web
-    name: travel-journal-backend
+    name: my-travel-journal-backend
     env: java
     buildCommand: ./mvnw clean install
-    startCommand: java -jar target/backend-0.0.1-SNAPSHOT.jar
-    envVars:
-      - key: JAVA_VERSION
-        value: 17
+    startCommand: java -jar target/*.jar
+    plan: free
+    region: frankfurt
+    branch: main
